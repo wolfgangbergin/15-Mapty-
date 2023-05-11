@@ -27,7 +27,7 @@ navigator.geolocation ?
 
 // t('banana')
 
-t(wolf)
+test1(wolf)
 let constructor = 'constructor';
 
 export default constructor;

@@ -23,10 +23,6 @@ Object.defineProperty(Window.prototype, 'e', {
   enumerable: 0,
 });
 
-
-this.__proto__.t = (param1) => {
-  l(`test: ${param1}`);
-  return param1;
-}
+d(this)
 
 this.__proto__.wolf = 'wolf313';
