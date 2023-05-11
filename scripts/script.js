@@ -1,7 +1,9 @@
 'use strict';
 
-import script2 from './geoLocation/geoLocation.js'
-
+// import script1 from './test/test1.js'
+// import constructon2 from './test/test2.js'
+// import constructon3 from './test/test3.js'
+// import constructon4 from './test/test4.js'
 
 
 
