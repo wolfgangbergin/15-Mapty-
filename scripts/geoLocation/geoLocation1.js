@@ -3,7 +3,7 @@ navigator.geolocation ?
     position => {
       const { latitude, longitude, altitude } = position.coords;
       l(`https://www.google.com/maps/@${latitude},${longitude}`);
-      const map = L.map('wolfMap').setView([latitude, longitude], 130);
+      const map = L.map('wolfMap').setView([latitude, longitude], 1300);
 
       L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution:
@@ -27,7 +27,7 @@ navigator.geolocation ?
 
 // t('banana')
 
-test1(wolf)
+
 let constructor = 'constructor';
 
 export default constructor;

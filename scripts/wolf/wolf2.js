@@ -23,6 +23,4 @@ Object.defineProperty(Window.prototype, 'e', {
   enumerable: 0,
 });
 
-d(this)
 
-this.__proto__.wolf = 'wolf313';
