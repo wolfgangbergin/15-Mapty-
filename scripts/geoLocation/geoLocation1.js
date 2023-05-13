@@ -1,4 +1,5 @@
-
+let map;
+let tempCords;
 
 
 navigator.geolocation
@@ -7,7 +8,7 @@ navigator.geolocation
         const { latitude, longitude } = position.coords;
 
         l(`https://www.google.com/maps/@${latitude},${longitude}`);
-        const map = L.map('wolfMap').setView([latitude, longitude], 130);
+        map = L.map('wolfMap').setView([latitude, longitude], 130);
 
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           attribution:
@@ -17,7 +18,7 @@ navigator.geolocation
         map.on('click', function (mapEvent) {
           form.classList.remove('hidden');
           inputDistance.focus();
-         
+          tempCords = mapEvent.latlng
         });
       },
       err => {
@@ -27,7 +28,9 @@ navigator.geolocation
   : l('no geolocation');
 
 form.addEventListener('submit', function (e) {
- let {lat, lng} = mapEvent.latlng
+  e.preventDefault();
+  inputDistance.value = inputDuration.value =  inputCadence.value = inputElevation.value = '';
+ let {lat, lng} = tempCords
           L.marker([lat, lng])
           .addTo(map)
           .bindPopup(L.popup({
@@ -37,6 +40,15 @@ form.addEventListener('submit', function (e) {
             closeOnClick: false,
             className: 'running-popup',
           })).setPopupContent('Workout').openPopup()
+         
+});
+
+
+inputType.addEventListener('change', function () {
+  l('change');
+  //inputDistance.classList.toggle('form__input--hidden');
+  inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
+  inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
 });
 
 let constructor = 'constructor';
