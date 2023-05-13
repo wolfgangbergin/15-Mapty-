@@ -31,6 +31,7 @@ class App {
         form.classList.remove('hidden');
         inputDistance.focus();
         this.tempCords = mapEvent.latlng;
+        
       }.bind(this)
     );
     this._showFrom();
@@ -73,7 +74,7 @@ class App {
   }
 
   _newWorkout(){
-    
+
   }
 }
 
