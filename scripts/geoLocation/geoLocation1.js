@@ -1,5 +1,5 @@
-let map;
-let tempCords;
+// let map;
+// let tempCords;
 
 
 
@@ -47,12 +47,12 @@ let tempCords;
 // });
 
 
-inputType.addEventListener('change', function () {
-  l('change');
-  //inputDistance.classList.toggle('form__input--hidden');
-  inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
-  inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
-});
+// inputType.addEventListener('change', function () {
+//   l('change');
+//   //inputDistance.classList.toggle('form__input--hidden');
+//   inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
+//   inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
+// });
 
 let constructor = 'constructor';
 
