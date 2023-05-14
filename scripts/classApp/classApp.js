@@ -1,16 +1,18 @@
+import { testMeth } from "../classWorkout/getPosition.js";
+
 class App {
   constructor(props) {
     (this.workouts = props.workouts), this.map, this.tempCords;
   }
 
-  _testMeth(){
-    l(this)
-  }
+  _testMeth = testMeth
+
 
   _getPosition() {
     navigator.geolocation
       ? navigator.geolocation.getCurrentPosition(
           position => {
+            l(this)
             const { latitude, longitude } = position.coords;
 
             this.map = L.map('wolfMap').setView([latitude, longitude], 130);
@@ -85,7 +87,7 @@ class App {
 let wolfMan = new App({ workouts: [] });
 
 wolfMan._getPosition();
-
+wolfMan._testMeth();
 let constructor = 'constructor';
 
 export default constructor;

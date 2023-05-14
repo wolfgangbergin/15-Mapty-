@@ -24,7 +24,7 @@ let testRunWorkout = new Running({
 
   });
 
-  d(testRunWorkout);
+//   d(testRunWorkout);
 
 
 let constructor = 'constructor';
