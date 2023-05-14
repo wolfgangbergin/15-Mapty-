@@ -1,7 +1,7 @@
-function showForm(mapEvent){
-    form.classList.remove('hidden');
-    inputDistance.focus();
-    this._mapEvent = mapEvent;
+function showForm(mapEvent) {
+  form.classList.remove('hidden');
+  inputDistance.focus();
+  this._mapEvent = mapEvent;
 }
 
 const loadMap = function (position) {
@@ -18,7 +18,6 @@ const loadMap = function (position) {
 };
 
 let getPosition = function () {
-  l(this);
   this._map = L.map('wolfMap');
 
   navigator.geolocation
@@ -27,8 +26,5 @@ let getPosition = function () {
       })
     : l('no geolocation');
 };
-
-
-
 
 export { getPosition };
