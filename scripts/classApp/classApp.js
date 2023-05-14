@@ -1,14 +1,14 @@
 import { getPosition } from '../classWorkout/getPosition.js';
 class App {
   _map;
-  _mapEvent;
+  #mapEvent;
   constructor(props) {
     this.workouts = props.workouts;
 
     this._getPosition();
 
     this._showFrom();
-    form.addEventListener('submit', this._submitForm.bind(this));
+    form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
   }
 
@@ -18,10 +18,11 @@ class App {
     this._map.on('click', mapEvent => {
       form.classList.remove('hidden');
       inputDistance.focus();
-      this._mapEvent = mapEvent;
+      this.#mapEvent = mapEvent;
     });
   }
-  _submitForm(e) {
+  _newWorkout(e) {
+    l(this)
     e.preventDefault();
     inputDistance.value =
       inputDuration.value =
@@ -31,7 +32,7 @@ class App {
 
     let {
       latlng: { lat, lng },
-    } = this._mapEvent;
+    } = this.#mapEvent;
     L.marker([lat, lng])
       .addTo(this._map)
       .bindPopup(
@@ -52,7 +53,7 @@ class App {
     inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
   }
 
-  _newWorkout() {}
+  
 }
 let app = new App({ workouts: [] });
 
