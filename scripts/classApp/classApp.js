@@ -10,7 +10,6 @@ class App {
   }
 
   _newWorkout = e => {
-    l(this);
     e.preventDefault();
     inputDistance.value =
       inputDuration.value =
