@@ -1,4 +1,8 @@
-
+function showForm(mapEvent){
+    form.classList.remove('hidden');
+    inputDistance.focus();
+    this._mapEvent = mapEvent;
+}
 
 const loadMap = function (position) {
   const { latitude, longitude } = position.coords;
@@ -10,11 +14,7 @@ const loadMap = function (position) {
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(this._map);
 
-  this._map.on('click', mapEvent => {
-    form.classList.remove('hidden');
-    inputDistance.focus();
-    this._mapEvent = mapEvent;
-  });
+  this._map.on('click', showForm.bind(this));
 };
 
 let getPosition = function () {
