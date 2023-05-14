@@ -1,59 +1,49 @@
-import { getPosition } from '../classWorkout/getPosition.js';
+import { getPosition, loadMap } from '../classWorkout/getPosition.js';
 class App {
+    _map
+    #tempCords
   constructor(props) {
-    (this.workouts = props.workouts), this.map, this.tempCords;
+    (this.workouts = props.workouts)
+    this._getPosition();
   }
+  
   _getPosition = getPosition;
-  _loadMap() {
-    this.map.on(
-      'click',
-      function (mapEvent) {
-        form.classList.remove('hidden');
-        inputDistance.focus();
-        this.tempCords = mapEvent.latlng;
-      }.bind(this)
-    );
-    this._showFrom();
-  }
 
-  _wolfMeth() {
-    this.map.on(
-      'click',
-      function (mapEvent) {
-        form.classList.remove('hidden');
-        inputDistance.focus();
-        this.tempCords = mapEvent.latlng;
-      }.bind(this)
-    );
-    this._showFrom();
-  }
   _showFrom() {
-    form.addEventListener(
-      'submit',
-       (e)=> {
-        e.preventDefault();
-        inputDistance.value =
-          inputDuration.value =
-          inputCadence.value =
-          inputElevation.value =
-            '';
-
-        let { lat, lng } = this.tempCords;
-        L.marker([lat, lng])
-          .addTo(this.map)
-          .bindPopup(
-            L.popup({
-              maxWidth: 250,
-              minWidth: 100,
-              autoClose: false,
-              closeOnClick: false,
-              className: 'running-popup',
-            })
-          )
-          .setPopupContent('Workout')
-          .openPopup();
+    this._map.on(
+      'click',
+     (mapEvent)=> {
+        form.classList.remove('hidden');
+        inputDistance.focus();
+        this.#tempCords = mapEvent.latlng;
       }
     );
+    this._submitForm();
+  }
+  _submitForm() {
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      inputDistance.value =
+        inputDuration.value =
+        inputCadence.value =
+        inputElevation.value =
+          '';
+
+      let { lat, lng } = this.#tempCords;
+      L.marker([lat, lng])
+        .addTo(this._map)
+        .bindPopup(
+          L.popup({
+            maxWidth: 250,
+            minWidth: 100,
+            autoClose: false,
+            closeOnClick: false,
+            className: 'running-popup',
+          })
+        )
+        .setPopupContent('Workout')
+        .openPopup();
+    });
     this._toggleElevationField();
   }
 
@@ -68,8 +58,8 @@ class App {
 
   _newWorkout() {}
 }
-let wolfMan = new App({ workouts: [] });
-wolfMan._getPosition();
+let app = new App({ workouts: [] });
+
 
 let constructor = 'constructor';
 
