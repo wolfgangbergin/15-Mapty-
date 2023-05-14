@@ -1,23 +1,32 @@
-import { getPosition, loadMap } from '../classWorkout/getPosition.js';
+import { getPosition, loadMap, wolfFunc } from '../classWorkout/getPosition.js';
 class App {
   _map;
   _mapEvent;
   constructor(props) {
     this.workouts = props.workouts;
+    
+  
+  
     this._getPosition();
+    
+    this._showFrom();
     form.addEventListener('submit', this._submitForm.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
   }
 
+  _wolfMeth = wolfFunc;
+
   _getPosition = getPosition;
+  //_loadMap = loadMap
 
   _showFrom() {
+    l('3');
     this._map.on('click', mapEvent => {
       form.classList.remove('hidden');
       inputDistance.focus();
       this._mapEvent = mapEvent;
-    
     });
+   
   }
   _submitForm(e) {
     e.preventDefault();
