@@ -1,10 +1,11 @@
 import { getPosition, loadMap } from '../classWorkout/getPosition.js';
 class App {
     _map
-    #tempCords
+    #mapEvent
   constructor(props) {
     (this.workouts = props.workouts)
     this._getPosition();
+    
   }
   
   _getPosition = getPosition;
@@ -15,7 +16,7 @@ class App {
      (mapEvent)=> {
         form.classList.remove('hidden');
         inputDistance.focus();
-        this.#tempCords = mapEvent.latlng;
+        this.#mapEvent = mapEvent;
       }
     );
     this._submitForm();
@@ -29,7 +30,7 @@ class App {
         inputElevation.value =
           '';
 
-      let { lat, lng } = this.#tempCords;
+      let { latlng: {lat, lng} } = this.#mapEvent;
       L.marker([lat, lng])
         .addTo(this._map)
         .bindPopup(
