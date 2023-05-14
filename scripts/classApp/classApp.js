@@ -1,35 +1,9 @@
-import { testMeth } from "../classWorkout/getPosition.js";
-
+import { getPosition } from '../classWorkout/getPosition.js';
 class App {
   constructor(props) {
     (this.workouts = props.workouts), this.map, this.tempCords;
   }
-
-  _testMeth = testMeth
-
-
-  _getPosition() {
-    navigator.geolocation
-      ? navigator.geolocation.getCurrentPosition(
-          position => {
-            l(this)
-            const { latitude, longitude } = position.coords;
-
-            this.map = L.map('wolfMap').setView([latitude, longitude], 130);
-
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-              attribution:
-                '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-            }).addTo(this.map);
-
-            this._loadMap();
-          },
-          err => {
-            l(err);
-          }
-        )
-      : l('no geolocation');
-  }
+  _getPosition = getPosition;
   _loadMap() {
     this.map.on(
       'click',
@@ -37,7 +11,6 @@ class App {
         form.classList.remove('hidden');
         inputDistance.focus();
         this.tempCords = mapEvent.latlng;
-        
       }.bind(this)
     );
     this._showFrom();
@@ -45,7 +18,7 @@ class App {
   _showFrom() {
     form.addEventListener(
       'submit',
-      function (e) {
+       (e)=> {
         e.preventDefault();
         inputDistance.value =
           inputDuration.value =
@@ -67,27 +40,25 @@ class App {
           )
           .setPopupContent('Workout')
           .openPopup();
-      }.bind(this)
+      }
     );
-    this._toggleElevationField()
+    this._toggleElevationField();
   }
 
-  _toggleElevationField(){
+  _toggleElevationField() {
     inputType.addEventListener('change', function () {
-        inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
-        inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
-      });
+      inputElevation
+        .closest('.form__row')
+        .classList.toggle('form__row--hidden');
+      inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
+    });
   }
 
-  _newWorkout(){
-
-  }
+  _newWorkout() {}
 }
-
 let wolfMan = new App({ workouts: [] });
-
 wolfMan._getPosition();
-wolfMan._testMeth();
+
 let constructor = 'constructor';
 
 export default constructor;
