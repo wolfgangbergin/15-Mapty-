@@ -3,6 +3,10 @@ class App {
     (this.workouts = props.workouts), this.map, this.tempCords;
   }
 
+  _testMeth(){
+    l(this)
+  }
+
   _getPosition() {
     navigator.geolocation
       ? navigator.geolocation.getCurrentPosition(
