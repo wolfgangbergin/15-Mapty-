@@ -12,7 +12,7 @@
                 '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
             }).addTo(this.map);
 
-            this._loadMap();
+            this._wolfMeth();
           },
           err => {
             l(err);

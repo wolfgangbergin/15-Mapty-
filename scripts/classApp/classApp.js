@@ -15,6 +15,18 @@ class App {
     );
     this._showFrom();
   }
+
+  _wolfMeth() {
+    this.map.on(
+      'click',
+      function (mapEvent) {
+        form.classList.remove('hidden');
+        inputDistance.focus();
+        this.tempCords = mapEvent.latlng;
+      }.bind(this)
+    );
+    this._showFrom();
+  }
   _showFrom() {
     form.addEventListener(
       'submit',
