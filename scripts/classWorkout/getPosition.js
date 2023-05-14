@@ -1,3 +1,5 @@
+
+
 const loadMap = function (position) {
   const { latitude, longitude } = position.coords;
 
@@ -16,6 +18,7 @@ const loadMap = function (position) {
 };
 
 let getPosition = function () {
+  l(this);
   this._map = L.map('wolfMap');
 
   navigator.geolocation
@@ -24,5 +27,8 @@ let getPosition = function () {
       })
     : l('no geolocation');
 };
+
+
+
 
 export { getPosition };

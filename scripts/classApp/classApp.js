@@ -4,16 +4,12 @@ class App {
   _mapEvent;
   constructor(props) {
     this.workouts = props.workouts;
-
-    this._getPosition();
-
-    form.addEventListener('submit', this._newWorkout.bind(this));
+    getPosition.call(this);
+    form.addEventListener('submit', this._newWorkout);
     inputType.addEventListener('change', this._toggleElevationField);
   }
 
-  _getPosition = getPosition;
-
-  _newWorkout(e) {
+  _newWorkout = e => {
     l(this);
     e.preventDefault();
     inputDistance.value =
@@ -38,7 +34,7 @@ class App {
       )
       .setPopupContent('Workout')
       .openPopup();
-  }
+  };
 
   _toggleElevationField() {
     inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
