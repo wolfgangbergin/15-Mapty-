@@ -7,6 +7,12 @@ const loadMap = function (position) {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
   }).addTo(this._map);
+
+  this._map.on('click', mapEvent => {
+    form.classList.remove('hidden');
+    inputDistance.focus();
+    this._mapEvent = mapEvent;
+  });
 };
 
 let getPosition = function () {
