@@ -10,7 +10,7 @@ let wolf = {
     fName: 'wolf313'
 }
 
-wolf.getFName = kim.getFName
+wolf.getFName = kim.getFName.bind(wolf)
 
 l(kim.getFName())
 l(wolf.getFName())
