@@ -1,11 +1,7 @@
-import {
-  getPosition,
- 
-  toggleElevationField,
-} from './classApp2.js';
-import { Running } from '../classWorkout/classRunning.js';
-import { Cycling } from '../classWorkout/classCycling.js';
+import { getPosition, toggleElevationField } from './classAppHelper1.js';
+
 import { newWorkout } from './newWorkout.js';
+import { addWorkout } from './addWorkout.js';
 
 class App {
   _map;
@@ -21,15 +17,9 @@ class App {
 
   _toggleElevationField = toggleElevationField;
 
-  _addWorkout(param) {
-    let tempObj;
-    param.inputType === 'running' && (tempObj = new Running(param));
-    param.inputType === 'cycling' && (tempObj = new Cycling(param));
+  _addWorkout = addWorkout;
 
-   
- this.workouts.push(tempObj)
-
-  }
+  //_renderSideBar = renderSideBar;
 }
 let app = new App();
 
