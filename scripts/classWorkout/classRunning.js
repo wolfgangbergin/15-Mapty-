@@ -3,11 +3,18 @@ import { Workout } from './classWorkout.js';
 
 
 class Running extends Workout {
+  _wolf = 'wolf'
+  #pace
   constructor(props) {
     super(props);
     
-      (this.cadence = props.cadence),
-      (this.pace = props.pace);
+      (this.cadence = props.cadence)
+      this.calcPace()
+  }
+
+  calcPace(){
+    this.#pace = this.distance / this.duration + ' mph'
+    return this.#pace
   }
 }
 
@@ -15,16 +22,18 @@ class Running extends Workout {
 let testRunWorkout = new Running({
     id: 1234,
     date: new Date(),
-    distance: '31 blocks',
-    duration: '10min',
+    distance: 10,
+    duration: 2,
     coords: { lat: 42.41161529314908, lng: -83.3028942346573 },
     name: 'wolf"s run',
     cadence: '3spm',
-    pace: '3mph'
+    
 
   });
 
-//   d(testRunWorkout);
+  // d(testRunWorkout);
+
+export { Running };
 
 
 let constructor = 'constructor';

@@ -1,11 +1,13 @@
 class Workout {
+  date = new Date()
+  id = Math.random()
   constructor(props) {
     (this.name = props.name),
-    (this.id = props.id),
+    
       (this.distance = props.distance),
       (this.duration = props.duration),
-      (this.coords = props.coords),
-      (this.date = props.date);
+      (this.coords = props.coords)
+      
   }
 }
 
