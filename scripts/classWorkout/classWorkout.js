@@ -2,6 +2,7 @@ class Workout {
   date = new Date()
   id = Math.random()
   constructor(props) {
+    (this.inputType = props.inputType),
     (this.name = props.name),
     
       (this.distance = props.distance),

@@ -1,31 +1,37 @@
-import { getPosition, newWorkout }from './getPosition.js';
+import {
+  getPosition,
+ 
+  toggleElevationField,
+} from './classApp2.js';
 import { Running } from '../classWorkout/classRunning.js';
 import { Cycling } from '../classWorkout/classCycling.js';
+import { newWorkout } from './newWorkout.js';
 
 class App {
   _map;
   _mapEvent;
   constructor(props) {
-    this.workouts = props.workouts;
+    this.workouts = [];
     getPosition.call(this);
     form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
   }
 
-  _newWorkout = newWorkout
+  _newWorkout = newWorkout;
 
-  _toggleElevationField() {
-    inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
-    inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
+  _toggleElevationField = toggleElevationField;
+
+  _addWorkout(param) {
+    let tempObj;
+    param.inputType === 'running' && (tempObj = new Running(param));
+    param.inputType === 'cycling' && (tempObj = new Cycling(param));
+
+   
+ this.workouts.push(tempObj)
+
   }
- _addWorkout(param){
-  l(param)
-const tempWorkout ={}
-
- }
-
 }
-let app = new App({ workouts: [] });
+let app = new App();
 
 let constructor = 'constructor';
 
