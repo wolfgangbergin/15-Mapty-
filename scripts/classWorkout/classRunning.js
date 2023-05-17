@@ -16,6 +16,9 @@ class Running extends Workout {
     this.#pace = this.distance / this.duration + ' mph'
     return this.#pace
   }
+  get pace(){
+    return this.#pace
+  }
 }
 
 

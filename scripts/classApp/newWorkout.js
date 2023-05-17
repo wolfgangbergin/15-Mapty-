@@ -40,7 +40,7 @@ this._addWorkout(tempObj)
           
         })
       )
-      .setPopupContent(` ${inputType.value} ${month[tempObj.date.getUTCMonth()]} ${tempObj.date.getDay()}`)
+      .setPopupContent(` ${inputType.value} ${month[tempObj.date.getUTCMonth()]} ${tempObj.date.getDate()}`)
       .openPopup();
 
       form.classList.add('hidden');
