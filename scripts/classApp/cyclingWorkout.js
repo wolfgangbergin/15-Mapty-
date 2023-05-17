@@ -13,12 +13,12 @@ const cyclingWorkout = ele =>  `
 </div>
 <div class="workout__details">
   <span class="workout__icon">⚡️</span>
-  <span class="workout__value">${ele.pace}</span>
+  <span class="workout__value">${ele.speed}</span>
   <span class="workout__unit">km/h</span>
 </div>
 <div class="workout__details">
   <span class="workout__icon">⛰</span>
-  <span class="workout__value">${ele.cadence}</span>
+  <span class="workout__value">${ele.elevation}</span>
   <span class="workout__unit">m</span>
 </div>
 `

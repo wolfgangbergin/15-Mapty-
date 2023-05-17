@@ -17,6 +17,7 @@ function renderSideBar(workoutsArr) {
   
     li.classList.add(`${ele.inputType === 'running'?'workout--running': 'workout--cycling' }`);
     li.innerHTML = ele.inputType === 'running'? runningWorkout(ele) : cyclingWorkout(ele)
+    
     d(li.getAttribute('data-id'))
     df.prepend(form);
     df.appendChild(li);
