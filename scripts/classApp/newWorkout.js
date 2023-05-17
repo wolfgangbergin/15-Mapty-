@@ -6,6 +6,7 @@ const newWorkout = function(e){
     let {
       latlng: { lat, lng },
     } = this._mapEvent;
+    l(inputElevation.value)
  const tempObj = {
   inputType: inputType.value, 
   id: Math.random(),
@@ -25,7 +26,7 @@ this._addWorkout(tempObj)
       inputDuration.value =
       inputCadence.value =
       inputElevation.value =
-        '';
+       10;
 
   
     L.marker([lat, lng])

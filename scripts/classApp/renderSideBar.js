@@ -9,7 +9,7 @@ function renderSideBar(workoutsArr) {
 
   let df = new DocumentFragment();
   workoutsArr.forEach(ele => {
-    l(ele);
+   
     let li = document.createElement('li');
    
     li.dataset.id = ele.id
@@ -18,7 +18,7 @@ function renderSideBar(workoutsArr) {
     li.classList.add(`${ele.inputType === 'running'?'workout--running': 'workout--cycling' }`);
     li.innerHTML = ele.inputType === 'running'? runningWorkout(ele) : cyclingWorkout(ele)
     
-    d(li.getAttribute('data-id'))
+    
     df.prepend(form);
     df.appendChild(li);
   });

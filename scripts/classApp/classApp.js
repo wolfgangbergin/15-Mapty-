@@ -8,6 +8,7 @@ class App {
   _mapEvent;
   constructor(props) {
     this.workouts = [];
+  
     getPosition.call(this);
     form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
