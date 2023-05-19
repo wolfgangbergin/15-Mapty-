@@ -32,8 +32,17 @@ let getPosition = function () {
 
 
   function toggleElevationField() {
-    inputElevation.closest('.form__row').classList.toggle('form__row--hidden');
-    inputCadence.closest('.form__row').classList.toggle('form__row--hidden');
+  if (inputType.value === 'running'){
+    inputElevation.closest('.form__row').classList.add('form__row--hidden');
+    inputCadence.closest('.form__row').classList.remove('form__row--hidden');
+  } 
+  if (inputType.value === 'cycling'){
+    inputElevation.closest('.form__row').classList.remove('form__row--hidden');
+    inputCadence.closest('.form__row').classList.add('form__row--hidden');
+  }
+
+  
+   
   }
 
 export { getPosition,  toggleElevationField };

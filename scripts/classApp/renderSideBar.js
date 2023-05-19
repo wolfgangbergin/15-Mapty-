@@ -8,7 +8,7 @@ function renderSideBar(workoutsArr) {
   let form = document.querySelector('form');
 
   let df = new DocumentFragment();
-  workoutsArr.forEach(ele => {
+  workoutsArr.reverse().forEach(ele => {
    
     let li = document.createElement('li');
    

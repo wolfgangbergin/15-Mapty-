@@ -5,7 +5,7 @@ function addWorkout(param) {
   let tempObj;
   param.inputType === 'running' && (tempObj = new Running(param));
   param.inputType === 'cycling' && (tempObj = new Cycling(param));
-l(tempObj)
+
   this.workouts.push(tempObj);
 
   renderSideBar(this.workouts);
