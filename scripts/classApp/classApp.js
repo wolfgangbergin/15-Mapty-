@@ -21,6 +21,7 @@ class App {
 
   _addWorkout = addWorkout;
 
+  // _moveMap = moveMap;
   
 }
 let app = new App();
