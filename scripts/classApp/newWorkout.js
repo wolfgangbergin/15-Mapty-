@@ -16,7 +16,7 @@ const newWorkout = function(e){
 
     if(inputType.value === 'cycling'){
       const elevation = +inputElevation.value;
-      if(!Number.isFinite(elevation) || elevation < 0) return alert('please enter a positive number')
+      if(!Number.isFinite(elevation)) return alert('please enter a  number')
     }
    
    if(inputDistance.value > 0 && inputDuration.value > 0){

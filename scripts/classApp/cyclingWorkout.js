@@ -19,7 +19,7 @@ const cyclingWorkout = ele =>  `
 <div class="workout__details">
   <span class="workout__icon">⛰</span>
   <span class="workout__value">${ele.elevation}</span>
-  <span class="workout__unit">m</span>
+  <span class="workout__unit">M</span>
 </div>
 `
 

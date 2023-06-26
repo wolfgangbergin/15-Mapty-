@@ -22,17 +22,17 @@ class Running extends Workout {
 }
 
 
-let testRunWorkout = new Running({
-    id: 1234,
-    date: new Date(),
-    distance: 10,
-    duration: 2,
-    coords: { lat: 42.41161529314908, lng: -83.3028942346573 },
-    name: 'wolf"s run',
-    cadence: '3spm',
+// let testRunWorkout = new Running({
+//     id: 1234,
+//     date: new Date(),
+//     distance: 10,
+//     duration: 2,
+//     coords: { lat: 42.41161529314908, lng: -83.3028942346573 },
+//     name: 'wolf"s run',
+//     cadence: '3spm',
     
 
-  });
+//   });
 
   // d(testRunWorkout);
 
