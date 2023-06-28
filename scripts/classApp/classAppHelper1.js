@@ -7,9 +7,9 @@ function showForm(mapEvent) {
 
 const loadMap = function (position) {
   const { latitude, longitude } = position.coords;
-
+l(latitude, longitude )
   this._map.setView([latitude, longitude], 130);
-
+  // this._map.setView([42.411742320493495, -86.50289123983067], 10);
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution:
       '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
@@ -19,7 +19,7 @@ const loadMap = function (position) {
 };
 
 let getPosition = function () {
-  this._map = L.map('wolfMap');
+   this._map = L.map('wolfMap');
 
   navigator.geolocation
     ? navigator.geolocation.getCurrentPosition(loadMap.bind(this), err => {
