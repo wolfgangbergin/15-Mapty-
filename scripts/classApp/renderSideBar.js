@@ -6,12 +6,12 @@ import { cyclingWorkout } from "./cyclingWorkout.js";
 function renderSideBar(workoutsArr) {
   const workoutsUL = document.querySelector('.workouts');
   let form = document.querySelector('form');
-  form.addEventListener('click', ()=>l('wolf') )
+
   let df = new DocumentFragment();
   workoutsArr.reverse().forEach(ele => {
    
     let li = document.createElement('li');
-   
+   li.addEventListener('click', ()=>l(ele) )
     li.dataset.id = ele.id
     li.classList.add('workout');
   
