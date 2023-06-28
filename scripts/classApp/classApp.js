@@ -22,14 +22,14 @@ class App {
 
   _addWorkout = addWorkout;
 
-  //  _moveMap = moveMap;
+
 
 
   
 }
 let app = new App();
 
-// app._moveMap();
+
 let constructor = 'constructor';
 
 export default constructor;

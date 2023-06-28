@@ -6,7 +6,7 @@ import { cyclingWorkout } from "./cyclingWorkout.js";
 function renderSideBar(workoutsArr) {
   const workoutsUL = document.querySelector('.workouts');
   let form = document.querySelector('form');
-
+  form.addEventListener('click', ()=>l('wolf') )
   let df = new DocumentFragment();
   workoutsArr.reverse().forEach(ele => {
    
