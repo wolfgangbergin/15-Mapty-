@@ -32,7 +32,7 @@ const newWorkout = function(e){
   cadence: +inputCadence.value,
   elevation: +inputElevation.value ,
 }
-l(tempObj)
+
 } else {
   return alert('please enter a positive number')
 }

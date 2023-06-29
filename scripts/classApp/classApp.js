@@ -29,7 +29,12 @@ class App {
 }
 let app = new App();
 
+l(app._map)
 
 let constructor = 'constructor';
 
+
 export default constructor;
+
+
+export {app}

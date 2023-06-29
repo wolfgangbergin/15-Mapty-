@@ -1,4 +1,4 @@
-
+import { moveMap } from "./moveMap.js";
 import { runningWorkout } from "./runningWorkout.js";
 
 import { cyclingWorkout } from "./cyclingWorkout.js";
@@ -9,9 +9,9 @@ function renderSideBar(workoutsArr) {
 
   let df = new DocumentFragment();
   workoutsArr.reverse().forEach(ele => {
-   
+  
     let li = document.createElement('li');
-   li.addEventListener('click', ()=>l(ele) )
+   li.addEventListener('click', moveMap.bind(null, ele))
     li.dataset.id = ele.id
     li.classList.add('workout');
   

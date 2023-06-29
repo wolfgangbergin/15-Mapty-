@@ -16,6 +16,9 @@ const loadMap = function (position) {
   }).addTo(this._map);
 
   this._map.on('click', showForm.bind(this));
+  
+
+  
 };
 
 let getPosition = function () {
@@ -26,6 +29,8 @@ let getPosition = function () {
         l(err);
       })
     : l('no geolocation');
+
+    return this._map;
 };
 
 
