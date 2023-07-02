@@ -6,9 +6,12 @@ function addWorkout(param) {
   param.inputType === 'running' && (tempObj = new Running(param));
   param.inputType === 'cycling' && (tempObj = new Cycling(param));
 
-  this.workouts.push(tempObj);
+  this._workouts.push(tempObj);
 
-  renderSideBar(this.workouts);
+
+  localStorage.setItem('workouts', JSON.stringify(this._workouts));
+
+  renderSideBar(this._workouts);
 }
 
 export { addWorkout };

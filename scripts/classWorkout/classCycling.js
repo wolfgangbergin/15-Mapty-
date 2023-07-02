@@ -3,7 +3,7 @@ import { Workout } from './classWorkout.js';
 
 
 class Cycling extends Workout {
-  #speed
+  _speed
   constructor(props) {
     super(props);
     
@@ -11,11 +11,11 @@ class Cycling extends Workout {
       this.calcSpeed()
   }
   calcSpeed(){
-    this.#speed = this.distance / this.duration + ' mph'
+    this._speed = this.distance / this.duration + ' mph'
     return this.speed
   }
   get speed(){
-    return this.#speed
+    return this._speed
   }
 }
 

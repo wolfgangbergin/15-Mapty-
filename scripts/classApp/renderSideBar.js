@@ -4,6 +4,7 @@ import { runningWorkout } from "./runningWorkout.js";
 import { cyclingWorkout } from "./cyclingWorkout.js";
 
 function renderSideBar(workoutsArr) {
+  l(workoutsArr)
   const workoutsUL = document.querySelector('.workouts');
   let form = document.querySelector('form');
 
@@ -14,7 +15,7 @@ function renderSideBar(workoutsArr) {
    li.addEventListener('click', moveMap.bind(null, ele))
     li.dataset.id = ele.id
     li.classList.add('workout');
-  
+
     li.classList.add(`${ele.inputType === 'running'?'workout--running': 'workout--cycling' }`);
     li.innerHTML = ele.inputType === 'running'? runningWorkout(ele) : cyclingWorkout(ele)
     
