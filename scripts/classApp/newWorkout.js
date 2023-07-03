@@ -24,7 +24,8 @@ const newWorkout = function(e){
  tempObj = {
   inputType: inputType.value, 
   id: Math.random(),
-  date: new Date(),
+  // date: new Date(),
+  dateS:  `${ month[new Date().getUTCMonth()] }  ${new Date().getDate()}` ,
   distance: +inputDistance.value,
   duration: +inputDuration.value,
   coords: { lat: lat, lng: lng },
@@ -62,7 +63,7 @@ this._addWorkout(tempObj)
           
         })
       )
-      .setPopupContent(` ${inputType.value} ${month[tempObj.date.getUTCMonth()]} ${tempObj.date.getDate()}`)
+      .setPopupContent(` ${inputType.value}  ${tempObj.dateS}`)
       .openPopup();
 
       form.classList.add('hidden');

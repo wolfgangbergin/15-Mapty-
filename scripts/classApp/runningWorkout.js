@@ -1,7 +1,8 @@
 import { month } from "./month.js";
-const runningWorkout = ele =>  `<h2 class="workout__title"> ${ele.inputType} ${
-    month[ele.date.getUTCMonth()]
-  } ${ele.date.getDate()}</h2>
+const runningWorkout = ele =>  `<h2 class="workout__title"> ${ele.inputType}
+ ${ ele.dateS} 
+  
+  </h2>
   <div class="workout__details">
     <span class="workout__icon">🏃‍♂️</span>
     <span class="workout__value">${ele.distance}</span>

@@ -2,10 +2,10 @@ import { app } from "./classApp.js";
 
 
 function moveMap(ele){
-    l(ele.coords)
+    
     const { lat, lng } = ele.coords;
-    l(lat, lng )
-    l(app._map.setView([lat, lng], 130))
+   
+    app._map.setView([lat, lng], 130);
 }
 
 

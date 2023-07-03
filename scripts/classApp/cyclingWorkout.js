@@ -1,6 +1,7 @@
 import { month } from "./month.js";
-const cyclingWorkout = ele =>  `    
-<h2 class="workout__title">Cycling on April 5</h2>
+const cyclingWorkout = ele =>  `<h2 class="workout__title"> ${ele.inputType}
+${ ele.dateS}  
+</h2>
 <div class="workout__details">
   <span class="workout__icon">🚴‍♀️</span>
   <span class="workout__value">${ele.distance}</span>
