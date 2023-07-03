@@ -6,17 +6,17 @@ import { renderSideBar } from './renderSideBar.js';
 function getLocalStorage() {
   let storage = localStorage.getItem('workouts');
   if (storage) {
-    this.workouts = JSON.parse(storage);
-    renderSideBar(this.workouts);
+    this._workouts = JSON.parse(storage);
+    renderSideBar(this._workouts);
   }
 }
 
 class App {
   _map;
   _mapEvent;
-  
+  _workouts;
   constructor(props) {
-    this.workouts = [];
+    this._workouts = [];
   
     getPosition.call(this);
     form.addEventListener('submit', this._newWorkout.bind(this));
@@ -41,7 +41,7 @@ class App {
 let app = new App();
  app._getLocalStorage();
 
-
+l(app._workouts)
 
 let constructor = 'constructor';
 
