@@ -14,9 +14,9 @@ function getLocalStorage() {
 class App {
   _map;
   _mapEvent;
-  _workouts
+  
   constructor(props) {
-    this._workouts = [];
+    this.workouts = [];
   
     getPosition.call(this);
     form.addEventListener('submit', this._newWorkout.bind(this));
