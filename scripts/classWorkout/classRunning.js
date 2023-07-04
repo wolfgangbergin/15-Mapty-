@@ -4,7 +4,7 @@ import { Workout } from './classWorkout.js';
 
 class Running extends Workout {
   _wolf = 'wolf'
-  #pace
+  _pace
   constructor(props) {
     super(props);
     
@@ -13,11 +13,11 @@ class Running extends Workout {
   }
 
   calcPace(){
-    this.#pace = this.distance / this.duration + ' mph'
-    return this.#pace
+    this._pace = this.distance / this.duration + ' mph'
+    return this._pace
   }
   get pace(){
-    return this.#pace
+    return this._pace
   }
 }
 
