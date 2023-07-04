@@ -7,7 +7,7 @@ function getLocalStorage() {
   let storage = localStorage.getItem('workouts');
   if (storage) {
     this.workouts = JSON.parse(storage);
-    renderSideBar(this._workouts);
+    
   }
 }
 
@@ -31,6 +31,7 @@ class App {
   _addWorkout = addWorkout;
 
   _getLocalStorage = getLocalStorage;
+
   get workouts(){
     return this._workouts
   }
@@ -38,13 +39,14 @@ class App {
 
 set workouts(param){
   this._workouts = param
-
+  renderSideBar(this.workouts);
 };
 
   
 }
 
 let app = new App();
+
  app._getLocalStorage();
 
 
