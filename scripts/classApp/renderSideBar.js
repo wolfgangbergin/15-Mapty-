@@ -4,7 +4,7 @@ import { runningWorkout } from "./runningWorkout.js";
 import { cyclingWorkout } from "./cyclingWorkout.js";
 
 function renderSideBar(workoutsArr) {
-  l(workoutsArr)
+  
   const workoutsUL = document.querySelector('.workouts');
   let form = document.querySelector('form');
 
