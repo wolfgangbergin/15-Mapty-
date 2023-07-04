@@ -2,6 +2,7 @@ const month = ["January","February","March","April","May","June","July","August"
 import { marker } from "./marker.js";
 
 const newWorkout = function(e){
+  
   let tempObj ={}
     e.preventDefault();
     let {
@@ -51,8 +52,8 @@ this._addWorkout(tempObj)
       inputElevation.value =
        313;
 
-  
-    L.marker([lat, lng])
+ 
+    L.marker([tempObj.coords.lat, tempObj.coords.lng])
       .addTo(this._map)
       .bindPopup(
         L.popup({
@@ -60,7 +61,7 @@ this._addWorkout(tempObj)
           minWidth: 50,
           autoClose: false,
           closeOnClick: false,
-          className: inputType.value === 'running' ? 'running-popup' : 'cycling-popup'
+          className: tempObj.inputType === 'running' ? 'running-popup' : 'cycling-popup'
           
         })
       )

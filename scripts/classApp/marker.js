@@ -1,4 +1,4 @@
-function marker(lat, lng){
+function marker(tempObj){
      L.marker([lat, lng])
       .addTo(this._map)
       .bindPopup(
