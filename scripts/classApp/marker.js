@@ -12,7 +12,7 @@ function marker(tempObj){
         
       })
     )
-    .setPopupContent(` ${inputType.value}  ${tempObj.dateS}`)
+    .setPopupContent(` ${tempObj.inputType}  ${tempObj.dateS}`)
     .openPopup();
 
 }

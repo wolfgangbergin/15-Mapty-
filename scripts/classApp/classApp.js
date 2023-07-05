@@ -2,6 +2,7 @@ import { getPosition, toggleElevationField } from './classAppHelper1.js';
 import { newWorkout } from './newWorkout.js';
 import { addWorkout } from './addWorkout.js';
 import { renderSideBar } from './renderSideBar.js';
+import {marker} from  './marker.js'
  
 function getLocalStorage() {
   let storage = localStorage.getItem('workouts');
