@@ -41,6 +41,10 @@ class App {
 set workouts(param){
   this._workouts = param
   renderSideBar(this.workouts);
+ this.workouts.forEach(obj=>{
+ l(obj)
+ marker.call(this, obj)
+ })
 };
 
   
