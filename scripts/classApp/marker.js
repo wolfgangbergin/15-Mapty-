@@ -1,3 +1,4 @@
+
 function marker(tempObj){
 
     L.marker([tempObj.coords.lat, tempObj.coords.lng])
@@ -15,6 +16,7 @@ function marker(tempObj){
     .setPopupContent(`wolf ${tempObj.inputType}  ${tempObj.dateS}`).openPopup();
     
 
+  
 
 }
 
