@@ -2,8 +2,9 @@ const month = ["January","February","March","April","May","June","July","August"
 import { marker } from "./marker.js";
 
 const newWorkout = function(e){
-  
+
   let tempObj ={}
+
     e.preventDefault();
     let {
       latlng: { lat, lng },
@@ -34,6 +35,8 @@ const newWorkout = function(e){
   name: 'wolf"s run',
   cadence: +inputCadence.value,
   elevation: +inputElevation.value ,
+  
+
 }
 
 } else {

@@ -39,10 +39,11 @@ class App {
 
 
 set workouts(param){
+
   this._workouts = param
   renderSideBar(this.workouts);
  this.workouts.forEach(obj=>{
- l(obj)
+ l(obj.id)
  marker.call(this, obj)
  })
 };
@@ -56,6 +57,10 @@ let app = new App();
 
 
 
+
+
+let kim = document.getElementById('wolfgang')
+l(kim)
 let constructor = 'constructor';
 
 

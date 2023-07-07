@@ -8,12 +8,13 @@ function marker(tempObj){
         minWidth: 50,
         autoClose: false,
         closeOnClick: false,
-        className: tempObj.inputType === 'running' ? 'running-popup' : 'cycling-popup'
-        
+        className: tempObj.inputType === 'running' ? 'running-popup' : 'cycling-popup',
+        id: 'wolfgang'
       })
     )
-    .setPopupContent(` ${tempObj.inputType}  ${tempObj.dateS}`)
-    .openPopup();
+    .setPopupContent(`wolf ${tempObj.inputType}  ${tempObj.dateS}`).openPopup();
+    
+
 
 }
 
