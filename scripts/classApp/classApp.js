@@ -42,10 +42,14 @@ set workouts(param){
 
   this._workouts = param
   renderSideBar(this.workouts);
-//  this.workouts.forEach(obj=>{
+  
+  this._map.whenReady(() => { this.workouts.forEach(obj=>{
 
-//  marker.call(this, obj)
-//  })
+    marker.call(this, obj)
+    }) });
+
+
+    
 };
 
   
@@ -57,10 +61,6 @@ let app = new App();
 
 
 
-app._map.whenReady(() => { app.workouts.forEach(obj=>{
-
-  marker.call(app, obj)
-  }) });
 
 
 let constructor = 'constructor';

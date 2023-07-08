@@ -22,6 +22,8 @@ const runningWorkout = ele =>  `<h2 class="workout__title"> ${ele.inputType}
     <span class="workout__icon">🦶🏼</span>
     <span class="workout__value">${ele.cadence}</span>
     <span class="workout__unit">spm</span>
-  </div>`
+  </div>
+  
+  `
 
   export {runningWorkout}
