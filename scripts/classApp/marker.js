@@ -16,8 +16,8 @@ function marker(tempObj){
     .setPopupContent(`wolf ${tempObj.inputType}  ${tempObj.dateS}`).openPopup();
     
 
-    let kim = document.querySelector('.running-popup');
-    l(kim)
+   
+ 
   
 
 }

@@ -3,7 +3,8 @@ import { newWorkout } from './newWorkout.js';
 import { addWorkout } from './addWorkout.js';
 import { renderSideBar } from './renderSideBar.js';
 import {marker} from  './marker.js'
- 
+import { deleteWorkout } from "./deleteWorkout.js";
+
 function getLocalStorage() {
   let storage = localStorage.getItem('workouts');
   if (storage) {
@@ -25,6 +26,8 @@ class App {
 
   }
 
+ _deleteWorkout = deleteWorkout.bind(this);
+
   _newWorkout = newWorkout;
 
   _toggleElevationField = toggleElevationField;
@@ -41,7 +44,7 @@ class App {
 set workouts(param){
 
   this._workouts = param
-  renderSideBar(this.workouts);
+  renderSideBar.call(this);
   
   this._map.whenReady(() => { this.workouts.forEach(obj=>{
 
@@ -49,13 +52,15 @@ set workouts(param){
     }) });
 
 
-    
+
 };
 
   
 }
 
 let app = new App();
+
+
 
  app._getLocalStorage();
 

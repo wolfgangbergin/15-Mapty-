@@ -2,21 +2,22 @@ import { moveMap } from "./moveMap.js";
 import { runningWorkout } from "./runningWorkout.js";
 
 import { cyclingWorkout } from "./cyclingWorkout.js";
+import { deleteWorkout } from "./deleteWorkout.js";
 
-function renderSideBar(workoutsArr) {
-  
+function renderSideBar() {
+
   const workoutsUL = document.querySelector('.workouts');
   let form = document.querySelector('form');
 
   let df = new DocumentFragment();
-  workoutsArr.reverse().forEach(ele => {
+  this.workouts.reverse().forEach(ele => {
 let Delete = document.createElement('button');
 Delete.classList.add('btn', 'btn--small', 'btn--delete');
 Delete.dataset.id = ele.id;
 Delete.textContent = 'Delete';
     let li = document.createElement('li');
    li.addEventListener('click', moveMap.bind(null, ele))
-   li.addEventListener('click', (e) => {l(e)})
+   li.addEventListener('click', (e) => {deleteWorkout.call(this, e)})
     li.dataset.id = ele.id
     li.classList.add('workout');
 
