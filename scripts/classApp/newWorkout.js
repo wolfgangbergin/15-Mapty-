@@ -60,9 +60,8 @@ const newWorkout = function(e){
     let temp = this.workouts
     temp.push(tempObj)
     this.workouts = temp;
-    l(this)
-    localStorage.setItem('workouts', JSON.stringify(this.workouts));
-
+   
+   
     // L.marker([tempObj.coords.lat, tempObj.coords.lng])
     //   .addTo(this._map)
     //   .bindPopup(
