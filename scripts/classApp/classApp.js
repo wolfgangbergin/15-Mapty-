@@ -48,7 +48,9 @@ set workouts(param){
   
   this._map.whenReady(() => { this.workouts.forEach(obj=>{
 
-    marker.call(this, obj)
+    marker.call(this, obj);
+
+    getPosition.call(this);
     }) });
 
 

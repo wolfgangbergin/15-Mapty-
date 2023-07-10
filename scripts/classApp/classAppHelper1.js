@@ -22,7 +22,8 @@ const loadMap = function (position) {
 };
 
 let getPosition = function () {
-   this._map = L.map('wolfMap');
+  if (this._map) return;
+  this._map = L.map('wolfMap');
 
   navigator.geolocation
     ? navigator.geolocation.getCurrentPosition(loadMap.bind(this), err => {
