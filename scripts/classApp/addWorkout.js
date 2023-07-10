@@ -11,7 +11,7 @@ function addWorkout(param) {
 
   localStorage.setItem('workouts', JSON.stringify(this._workouts));
 
-  renderSideBar(this._workouts);
+  renderSideBar.call(this);
 }
 
 export { addWorkout };

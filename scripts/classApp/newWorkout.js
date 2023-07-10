@@ -47,7 +47,7 @@ const newWorkout = function(e){
 
 
 
-this._addWorkout(tempObj)
+// this._addWorkout(tempObj)
 
     inputDistance.value =
       inputDuration.value =
@@ -55,7 +55,13 @@ this._addWorkout(tempObj)
       inputElevation.value =
        313;
 
-    marker.call(this, tempObj)
+   // marker.call(this, tempObj)
+  
+    let temp = this.workouts
+    temp.push(tempObj)
+    this.workouts = temp;
+    l(this)
+    localStorage.setItem('workouts', JSON.stringify(this.workouts));
 
     // L.marker([tempObj.coords.lat, tempObj.coords.lng])
     //   .addTo(this._map)
