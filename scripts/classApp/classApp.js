@@ -44,7 +44,9 @@ class App {
 set workouts(param){
 
   this._workouts = param
-  renderSideBar.call(this);
+ 
+  l(this._workouts)
+   renderSideBar.call(this);
   
   this._map.whenReady(() => { this.workouts.forEach(obj=>{
 
