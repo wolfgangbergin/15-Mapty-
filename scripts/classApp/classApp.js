@@ -38,7 +38,7 @@ class App {
   _getLocalStorage = getLocalStorage;
 
   get workouts(){
-    return this._workouts
+    return this._workouts;
   }
 
 
@@ -46,7 +46,7 @@ set workouts(param){
 
   this._workouts = param
  
-  l(this._workouts)
+
    renderSideBar.call(this);
   
   this._map.whenReady(() => { this.workouts.forEach(obj=>{

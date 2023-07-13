@@ -7,7 +7,7 @@ import { deleteWorkout } from "./deleteWorkout.js";
 
 
 function renderSideBar() {
-  l(this.workouts)
+  l('renderSideBar')
   const workoutsUL = document.querySelector('.workouts');
   // let form = document.querySelector('form');
 
@@ -15,7 +15,7 @@ function renderSideBar() {
   
   this.workouts.forEach(ele => {
   
-  
+  l('ele')
 let Delete = document.createElement('button');
 Delete.classList.add('btn', 'btn--small', 'btn--delete');
 Delete.dataset.id = ele.id;
@@ -33,10 +33,10 @@ Delete.textContent = 'Delete';
     
     df.replaceChildren(li);
     
-    
+  
   });
 
- 
+
   workoutsUL.appendChild(df);
  
 }

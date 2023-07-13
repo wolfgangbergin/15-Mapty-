@@ -1,6 +1,6 @@
 import { month } from "./month.js";
 function showForm(mapEvent) {
-  l(form)
+  
   form.classList.remove('hidden');
   inputDistance.focus();
   this._mapEvent = mapEvent;
