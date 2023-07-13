@@ -49,11 +49,11 @@ const newWorkout = function(e){
 
 // this._addWorkout(tempObj)
 
-    inputDistance.value =
+    inputDistance.value = this.count;
       inputDuration.value =
       inputCadence.value =
       inputElevation.value =
-       313;
+       777;
 
    // marker.call(this, tempObj)
   
@@ -78,6 +78,7 @@ const newWorkout = function(e){
     //   .openPopup();
 
       form.classList.add('hidden');
+      this.count++;
   };
 
   export {newWorkout}

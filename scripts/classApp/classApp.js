@@ -18,6 +18,7 @@ class App {
   _mapEvent;
   _workouts;
   constructor(props) {
+    this.count = 1;
     this._workouts = [];
   
     getPosition.call(this);
