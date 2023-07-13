@@ -29,7 +29,7 @@ const newWorkout = function(e){
   id: Math.random(),
   // date: new Date(),
   dateS:  `${ month[new Date().getUTCMonth()] }  ${new Date().getDate()}` ,
-  distance: +inputDistance.value,
+  distance: this.count,
   duration: +inputDuration.value,
   coords: { lat: lat, lng: lng },
   name: 'wolf"s run',
@@ -49,7 +49,7 @@ const newWorkout = function(e){
 
 // this._addWorkout(tempObj)
 
-    inputDistance.value = this.count;
+    // inputDistance.value = this.count;
       inputDuration.value =
       inputCadence.value =
       inputElevation.value =
