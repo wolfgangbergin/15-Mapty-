@@ -26,6 +26,7 @@ class App {
     form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
 
+this.layerGroup = L.layerGroup().addTo(this._map);
   }
 
  _deleteWorkout = deleteWorkout.bind(this);
@@ -45,8 +46,10 @@ class App {
 
 set workouts(param){
 
-  var layerGroup = L.layerGroup().addTo(this._map);
-
+ 
+ 
+ 
+  this.layerGroup.clearLayers();
   this._workouts = param;
  
 
@@ -54,7 +57,7 @@ set workouts(param){
 
   this._map.whenReady(() => { this.workouts.forEach(obj=>{
 
-    marker.call(this, obj, layerGroup);
+    marker.call(this, obj, );
 
     getPosition.call(this);
     }) });

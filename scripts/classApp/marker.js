@@ -1,11 +1,11 @@
 
-function marker(tempObj, layerGroup){
+function marker(tempObj, ){
 
-  
+
 
 
     L.marker([tempObj.coords.lat, tempObj.coords.lng])
-    .addTo(layerGroup)
+    .addTo(this.layerGroup)
     .bindPopup(
       L.popup({
         maxWidth: 250,
@@ -20,8 +20,8 @@ function marker(tempObj, layerGroup){
     
 
    
-   
-
+    
+    
 }
 
 
