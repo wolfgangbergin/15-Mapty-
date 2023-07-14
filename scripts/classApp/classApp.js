@@ -14,6 +14,7 @@ function getLocalStorage() {
 }
 
 class App {
+  layerGroup
   _map;
   _mapEvent;
   _workouts;
@@ -44,15 +45,16 @@ class App {
 
 set workouts(param){
 
+  var layerGroup = L.layerGroup().addTo(this._map);
 
-  this._workouts = param
+  this._workouts = param;
  
 
    renderSideBar.call(this);
-  
+
   this._map.whenReady(() => { this.workouts.forEach(obj=>{
 
-    marker.call(this, obj);
+    marker.call(this, obj, layerGroup);
 
     getPosition.call(this);
     }) });
