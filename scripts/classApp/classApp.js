@@ -57,8 +57,8 @@ set workouts(param){
     getPosition.call(this);
     }) });
 
-
-
+  localStorage.setItem('workouts', JSON.stringify(this.workouts));
+  
 };
 
   

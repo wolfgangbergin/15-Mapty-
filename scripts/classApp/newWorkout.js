@@ -60,11 +60,11 @@ const newWorkout = function(e){
    // marker.call(this, tempObj)
 
 
-   let temp2 = tempObj.inputType === 'running' ? new Running(tempObj):new Cycling(tempObj)
-   l(temp2)
+ 
+  
   
     let temp = this.workouts
-    temp.push(temp2)
+    temp.push(tempObj.inputType === 'running' ? new Running(tempObj):new Cycling(tempObj))
     this.workouts = temp;
    
    
