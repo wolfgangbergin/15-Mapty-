@@ -7,15 +7,15 @@ import { deleteWorkout } from "./deleteWorkout.js";
 
 
 function renderSideBar() {
-  l('renderSideBar')
+ 
   const workoutsUL = document.querySelector('.workouts');
   // let form = document.querySelector('form');
 
   let df = new DocumentFragment();
-  
+ 
   this.workouts.forEach(ele => {
   
-  
+
 let Delete = document.createElement('button');
 Delete.classList.add('btn', 'btn--small', 'btn--delete');
 Delete.dataset.id = ele.id;

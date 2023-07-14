@@ -44,6 +44,7 @@ class App {
 
 set workouts(param){
 
+
   this._workouts = param
  
 

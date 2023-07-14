@@ -1,5 +1,7 @@
 const month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 import { marker } from "./marker.js";
+import { Running } from "../classWorkout/classRunning.js";
+import { Cycling } from "../classWorkout/classCycling.js";
 
 const newWorkout = function(e){
 
@@ -35,7 +37,7 @@ const newWorkout = function(e){
   name: 'wolf"s run',
   cadence: +inputCadence.value,
   elevation: +inputElevation.value ,
-  
+
 
 }
 
@@ -56,9 +58,13 @@ const newWorkout = function(e){
        777;
 
    // marker.call(this, tempObj)
+
+
+   let temp2 = tempObj.inputType === 'running' ? new Running(tempObj):new Cycling(tempObj)
+   l(temp2)
   
     let temp = this.workouts
-    temp.push(tempObj)
+    temp.push(temp2)
     this.workouts = temp;
    
    

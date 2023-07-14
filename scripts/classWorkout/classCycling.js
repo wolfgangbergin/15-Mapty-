@@ -11,8 +11,8 @@ class Cycling extends Workout {
       this.calcSpeed()
   }
   calcSpeed(){
-    this._speed = this.distance / this.duration + ' mph'
-    return this.speed
+    this._speed = this.distance * 10
+    
   }
   get speed(){
     return this._speed

@@ -9,6 +9,8 @@ class Workout {
       (this.distance = props.distance),
       (this.duration = props.duration),
       (this.coords = props.coords)
+    
+      
       
   }
 }

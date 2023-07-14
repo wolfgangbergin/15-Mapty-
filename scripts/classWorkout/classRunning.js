@@ -13,8 +13,8 @@ class Running extends Workout {
   }
 
   calcPace(){
-    this._pace = this.distance / this.duration + ' mph'
-    return this._pace
+    this._pace = this.distance * 10
+    
   }
   get pace(){
     return this._pace
