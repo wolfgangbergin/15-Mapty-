@@ -8,10 +8,11 @@ class Cycling extends Workout {
     super(props);
     
       (this.elevation = props.elevation)
-      this.calcSpeed()
+      
+      this.wSpeed =   this.calcSpeed()
   }
   calcSpeed(){
-    this._speed = this.distance * 10
+    return this.distance * 10
     
   }
   get speed(){

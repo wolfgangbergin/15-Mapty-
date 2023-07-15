@@ -15,7 +15,7 @@ const runningWorkout = ele =>  `<h2 class="workout__title"> ${ele.inputType}
   </div>
   <div class="workout__details">
     <span class="workout__icon">⚡️</span>
-    <span class="workout__value">${ele.pace}</span>
+    <span class="workout__value">${ele.wPace}</span>
     <span class="workout__unit">min/km</span>
   </div>
   <div class="workout__details">

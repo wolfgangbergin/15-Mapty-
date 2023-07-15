@@ -7,7 +7,7 @@ import { deleteWorkout } from "./deleteWorkout.js";
 
 
 function renderSideBar() {
- 
+
   const workoutsUL = document.querySelector('.workouts');
   // let form = document.querySelector('form');
 
@@ -23,7 +23,7 @@ Delete.classList.add('btn', 'btn--small', 'btn--delete');
 Delete.dataset.id = ele.id;
 Delete.textContent = 'Delete';
     let li = document.createElement('li');
-   li.addEventListener('click', moveMap.bind(null, ele))
+   li.addEventListener('click', this._moveMap.bind(this, ele))
    li.addEventListener('click', (e) => {deleteWorkout.call(this, e)})
     li.dataset.id = ele.id
     li.classList.add('workout');

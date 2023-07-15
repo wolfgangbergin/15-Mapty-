@@ -10,10 +10,11 @@ class Running extends Workout {
     
       (this.cadence = props.cadence)
       this.calcPace()
+      this.wPace =   this.calcPace()
   }
 
   calcPace(){
-    this._pace = this.distance * 10
+    return this.distance * 10
     
   }
   get pace(){

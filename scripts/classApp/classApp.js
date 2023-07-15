@@ -4,6 +4,8 @@ import { addWorkout } from './addWorkout.js';
 import { renderSideBar } from './renderSideBar.js';
 import {marker} from  './marker.js'
 import { deleteWorkout } from "./deleteWorkout.js";
+import { moveMap } from './moveMap.js';
+
 
 function getLocalStorage() {
   let storage = localStorage.getItem('workouts');
@@ -38,6 +40,8 @@ this.layerGroup = L.layerGroup().addTo(this._map);
   _addWorkout = addWorkout;
 
   _getLocalStorage = getLocalStorage;
+
+  _moveMap = moveMap;
 
   get workouts(){
     return this._workouts;
