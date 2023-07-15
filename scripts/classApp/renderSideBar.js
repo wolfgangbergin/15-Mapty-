@@ -15,8 +15,10 @@ function renderSideBar() {
  
   this.workouts.forEach(ele => {
   
-
+let div = document.createElement('div');
+div.classList.add('wolf__row');
 let Delete = document.createElement('button');
+
 Delete.classList.add('btn', 'btn--small', 'btn--delete');
 Delete.dataset.id = ele.id;
 Delete.textContent = 'Delete';
@@ -29,7 +31,8 @@ Delete.textContent = 'Delete';
 
     li.classList.add(`${ele.inputType === 'running'?'workout--running': 'workout--cycling' }`);
     li.innerHTML = ele.inputType === 'running'? runningWorkout(ele) : cyclingWorkout(ele);
-    li.appendChild(Delete);
+    div.appendChild(Delete);
+    li.appendChild(div);
     
     df.prepend(li);
     

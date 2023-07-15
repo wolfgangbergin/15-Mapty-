@@ -76,6 +76,7 @@ a:visited {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 0.75rem 1.5rem;
+ 
 }
 .workout--running {
   border-left: 5px solid var(--color-brand--2);
@@ -218,4 +219,13 @@ a:visited {
 }
 .cycling-popup .leaflet-popup-content-wrapper {
   border-left: 5px solid var(--color-brand--1);
+}
+
+.wolf__row{
+  display: grid;
+ 
+
+  align-items: center;
+  grid-column: 1 / -1;
+  justify-items: center;
 }
