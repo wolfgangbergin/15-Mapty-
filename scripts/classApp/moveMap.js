@@ -1,6 +1,6 @@
 function moveMap(ele) {
   const { lat, lng } = ele.coords;
-
+l(this)
   this._map.setView([lat, lng], this.zoomLevel, {
     animate: true,
     pan: {
@@ -10,3 +10,6 @@ function moveMap(ele) {
 }
 
 export { moveMap };
+
+
+//June2012

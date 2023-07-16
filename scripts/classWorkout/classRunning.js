@@ -5,12 +5,14 @@ import { Workout } from './classWorkout.js';
 class Running extends Workout {
   _wolf = 'wolf'
   _pace
+ 
   constructor(props) {
     super(props);
     
       (this.cadence = props.cadence)
       this.calcPace()
       this.wPace =   this.calcPace()
+      
   }
 
   calcPace(){

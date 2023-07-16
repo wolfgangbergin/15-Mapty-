@@ -1,5 +1,3 @@
-
-
 const month = [
   'January',
   'February',
@@ -15,4 +13,4 @@ const month = [
   'December',
 ];
 
-export {month}
+export { month };

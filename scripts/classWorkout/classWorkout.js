@@ -2,7 +2,7 @@ class Workout {
   date = new Date()
   id = Math.random()
   dateS
-  
+  _clicks = 0
   constructor(props) {
     (this.inputType = props.inputType),
     (this.name = props.name),
@@ -14,7 +14,13 @@ class Workout {
       
       
   }
+  get clicks() {
+    return this._clicks;
+  }
+ 
 }
+
+
 
 export { Workout };
 

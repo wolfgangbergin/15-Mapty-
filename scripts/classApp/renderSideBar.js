@@ -15,8 +15,10 @@ function renderSideBar() {
  
   this.workouts.forEach(ele => {
   
-let div = document.createElement('div');
-div.classList.add('wolf__row');
+let delete__div = document.createElement('div');
+let count__div = document.createElement('div');
+delete__div.classList.add('Delete__row');
+count__div.classList.add('Delete__row');
 let Delete = document.createElement('button');
 
 Delete.classList.add('btn', 'btn--small', 'btn--delete');
@@ -31,8 +33,12 @@ Delete.textContent = 'Delete';
 
     li.classList.add(`${ele.inputType === 'running'?'workout--running': 'workout--cycling' }`);
     li.innerHTML = ele.inputType === 'running'? runningWorkout(ele) : cyclingWorkout(ele);
-    div.appendChild(Delete);
-    li.appendChild(div);
+    count__div.textContent = '777';
+    delete__div.appendChild(Delete);
+    delete__div.appendChild(count__div);
+    
+    li.appendChild(delete__div);
+  
     
     df.prepend(li);
     

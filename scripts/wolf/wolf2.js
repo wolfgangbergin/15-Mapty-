@@ -1,5 +1,12 @@
 'use strict';
-
+Object.defineProperty(Object.prototype, 'setClicks', {
+  value: function(){
+this._clicks += 1;
+  },
+  writable: 0,
+  configurable: 0,
+  enumerable: 0,
+});
 
 
 Object.defineProperty(Window.prototype, 'l', {
