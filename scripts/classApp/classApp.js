@@ -50,7 +50,7 @@ class App {
   }
 
   set workouts(param) {
-    l(param);
+  
 
     this.layerGroup.clearLayers();
     this.#workouts = param;

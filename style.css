@@ -221,10 +221,18 @@ a:visited {
   border-left: 5px solid var(--color-brand--1);
 }
 
-.Delete__button{
-  
+.delete__div{
+  grid-column: span 3;
+  display: flex;
+  justify-content: flex-end;
+ 
+
+ 
 }
 
-.count__span{
-  
+
+
+.count__div{
+ 
+  font-size: 1.5rem;
 }

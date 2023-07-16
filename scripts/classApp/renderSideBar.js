@@ -14,11 +14,12 @@ function renderSideBar() {
   let df = new DocumentFragment();
  
   this.workouts.forEach(ele => {
-  
+ 
 let delete__div = document.createElement('div');
 let count__div = document.createElement('div');
-delete__div.classList.add('Delete__row');
-count__div.classList.add('Delete__row');
+count__div.classList.add('count__div');
+delete__div.classList.add('delete__div');
+
 let Delete = document.createElement('button');
 
 Delete.classList.add('btn', 'btn--small', 'btn--delete');
@@ -33,9 +34,9 @@ Delete.textContent = 'Delete';
 
     li.classList.add(`${ele.inputType === 'running'?'workout--running': 'workout--cycling' }`);
     li.innerHTML = ele.inputType === 'running'? runningWorkout(ele) : cyclingWorkout(ele);
-    count__div.textContent = '777';
+    count__div.textContent = `count: ${ele._clicks}`;
     delete__div.appendChild(Delete);
-    delete__div.appendChild(count__div);
+    li.appendChild(count__div);
     
     li.appendChild(delete__div);
   
