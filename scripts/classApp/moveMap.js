@@ -1,15 +1,12 @@
+function moveMap(ele) {
+  const { lat, lng } = ele.coords;
 
-
-
-function moveMap(ele){
-    
-    const { lat, lng } = ele.coords;
-   
-    this._map.setView([lat, lng], 130);
+  this._map.setView([lat, lng], this.zoomLevel, {
+    animate: true,
+    pan: {
+      duration: 2,
+    },
+  });
 }
 
-
-export {moveMap}
-
-
- 
+export { moveMap };

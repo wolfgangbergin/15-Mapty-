@@ -9,7 +9,7 @@ function showForm(mapEvent) {
 const loadMap = function (position) {
   const { latitude, longitude } = position.coords;
 
-  this._map.setView([latitude, longitude], 130);
+  this._map.setView([latitude, longitude], this.zoomLevel);
   
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution:

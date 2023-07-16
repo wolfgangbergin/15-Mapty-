@@ -19,10 +19,11 @@ class App {
   layerGroup
   _map;
   _mapEvent;
-  _workouts;
+  #workouts;
+  #zoomLevel = 13;
   constructor(props) {
     this.count = 1;
-    this._workouts = [];
+   
   
     getPosition.call(this);
     form.addEventListener('submit', this._newWorkout.bind(this));
@@ -43,8 +44,12 @@ this.layerGroup = L.layerGroup().addTo(this._map);
 
   _moveMap = moveMap;
 
+  get zoomLevel(){
+    return this.#zoomLevel;
+  }
+
   get workouts(){
-    return this._workouts;
+    return this.#workouts;
   }
 
 
@@ -54,7 +59,7 @@ set workouts(param){
  
  
   this.layerGroup.clearLayers();
-  this._workouts = param;
+  this.#workouts = param;
  
 
    renderSideBar.call(this);
