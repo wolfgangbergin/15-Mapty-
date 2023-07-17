@@ -1,6 +1,9 @@
+import { addClicksCount } from "./addClicksCount.js";
 function moveMap(ele) {
   const { lat, lng } = ele.coords;
-l(this)
+ 
+  addClicksCount.call(this, ele)
+
   this._map.setView([lat, lng], this.zoomLevel, {
     animate: true,
     pan: {

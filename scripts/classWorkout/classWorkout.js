@@ -11,12 +11,10 @@ class Workout {
       (this.duration = props.duration),
       (this.coords = props.coords),
     
-      (this._clicks = 3)
+      (this._clicksCount = 0)
       
   }
-  get clicks() {
-    return this._clicks;
-  }
+  
  
 }
 

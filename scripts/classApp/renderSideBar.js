@@ -1,4 +1,4 @@
-import { moveMap } from "./moveMap.js";
+
 import { runningWorkout } from "./runningWorkout.js";
 
 import { cyclingWorkout } from "./cyclingWorkout.js";
@@ -34,7 +34,7 @@ Delete.textContent = 'Delete';
 
     li.classList.add(`${ele.inputType === 'running'?'workout--running': 'workout--cycling' }`);
     li.innerHTML = ele.inputType === 'running'? runningWorkout(ele) : cyclingWorkout(ele);
-    count__div.textContent = `count: ${ele._clicks}`;
+    count__div.textContent = `count: ${ele._clicksCount}`;
     delete__div.appendChild(Delete);
     li.appendChild(count__div);
     

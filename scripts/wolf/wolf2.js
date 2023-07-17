@@ -1,7 +1,7 @@
 'use strict';
-Object.defineProperty(Object.prototype, 'setClicks', {
+Object.defineProperty(Object.prototype, 'addClicksCount', {
   value: function(){
-this._clicks += 1;
+this._clicksCount += 1;
   },
   writable: 0,
   configurable: 0,
