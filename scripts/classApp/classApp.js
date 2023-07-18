@@ -6,13 +6,8 @@ import { renderSideBar } from './renderSideBar.js';
 import { marker } from './marker.js';
 import { deleteWorkout } from './deleteWorkout.js';
 import { moveMap } from './moveMap.js';
+import { getLocalStorage } from './getLocalStorage.js';
 
-function getLocalStorage() {
-  let storage = localStorage.getItem('workouts');
-  if (storage) {
-    this.workouts = JSON.parse(storage);
-  }
-}
 
 class App {
   layerGroup;
@@ -22,12 +17,13 @@ class App {
   #zoomLevel = 13;
   constructor(props) {
     this.count = 1;
-
+    
     getPosition.call(this);
     form.addEventListener('submit', this._newWorkout.bind(this));
     inputType.addEventListener('change', this._toggleElevationField);
 
     this.layerGroup = L.layerGroup().addTo(this._map);
+    this._getLocalStorage();
   }
 
   _deleteWorkout = deleteWorkout.bind(this);
@@ -72,7 +68,7 @@ class App {
 
 let app = new App();
 
-app._getLocalStorage();
+
 
 
 let constructor = 'constructor';
