@@ -74,6 +74,7 @@ let app = new App();
 
 app._getLocalStorage();
 
+
 let constructor = 'constructor';
 
 export default constructor;
