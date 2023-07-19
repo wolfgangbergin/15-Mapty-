@@ -3,7 +3,7 @@ import { Workout } from './classWorkout.js';
 
 
 class Running extends Workout {
-  _wolf = 'wolf'
+ 
   _pace
  
   constructor(props) {

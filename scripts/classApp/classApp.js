@@ -7,7 +7,7 @@ import { marker } from './marker.js';
 import { deleteWorkout } from './deleteWorkout.js';
 import { moveMap } from './moveMap.js';
 import { getLocalStorage } from './getLocalStorage.js';
-
+import {test7} from '../test/test7.js';
 
 class App {
   layerGroup;

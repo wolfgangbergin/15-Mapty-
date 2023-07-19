@@ -1,29 +1,40 @@
 
 
 
+ 
 
-let kim = {
-    name: 'kim',
-    _clicksCount: 3,
-}
+// let wolfFunc = new Function( 'l(`wolfFunc is here`)')
 
 
+// wolfFunc()
+///////////////////////////////////////////////
 
 
-
-kim.addClicksCount()
-kim.addClicksCount()
-kim.addClicksCount()
-kim.addClicksCount()
-kim.addClicksCount()
-kim.addClicksCount()
-kim.addClicksCount()
-kim.addClicksCount()
-kim.addClicksCount()
+// let kim = {
+//     name: 'kim',
+//     _clicksCount: 0,
+// }
 
 
 
-l(kim)
+
+
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+// kim.addClicksCount()
+
+
+
+// l(kim)
 
 
 
