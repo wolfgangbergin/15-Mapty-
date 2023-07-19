@@ -12,7 +12,8 @@ class Workout {
       (this.coords = props.coords),
     
       (this._clicksCount = 0),
-      this.AAAwolfFunc =  'l(`wolf is here`)'
+      (this._wolfCount = 0),
+      this.AAAwolfFunc =  'return this._wolfCount += a'
       
   }
   

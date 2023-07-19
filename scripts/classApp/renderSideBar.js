@@ -16,6 +16,9 @@ function renderSideBar() {
   this.workouts.forEach(ele => {
  
 let delete__div = document.createElement('div');
+let wolf__div = document.createElement('div');
+wolf__div.classList.add('wolf__div');
+wolf__div.innerHTML = `wolf: ${ele._wolfCount}`;
 let count__div = document.createElement('div');
 count__div.classList.add('count__div');
 delete__div.classList.add('delete__div');
@@ -39,6 +42,7 @@ Delete.textContent = 'Delete';
     li.appendChild(count__div);
     
     li.appendChild(delete__div);
+    li.appendChild(wolf__div);
   
     
     df.prepend(li);

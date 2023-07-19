@@ -47,6 +47,13 @@ class App {
   }
 
   set workouts(param) {
+
+   
+  
+    // let kim = new Function( param[0]?.AAAwolfFunc)
+
+   
+    // l( kim.call(param[0]))
   
 
     this.layerGroup.clearLayers();
