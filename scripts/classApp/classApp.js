@@ -8,12 +8,13 @@ import { deleteWorkout } from './deleteWorkout.js';
 import { moveMap } from './moveMap.js';
 import { getLocalStorage } from './getLocalStorage.js';
 import {test7} from '../test/test7.js';
+import  reset  from './reset.js';
 
 class App {
   layerGroup;
   _map;
   _mapEvent;
-  #workouts;
+  #workouts = [];
   #zoomLevel = 13;
   constructor(props) {
     this.count = 1;
@@ -48,14 +49,7 @@ class App {
 
   set workouts(param) {
 
-   
   
-    // let kim = new Function( param[0]?.AAAwolfFunc)
-
-   
-    // l( kim.call(param[0]))
-  
-
     this.layerGroup.clearLayers();
     this.#workouts = param;
 
@@ -74,9 +68,6 @@ class App {
 }
 
 let app = new App();
-
-
-
 
 let constructor = 'constructor';
 

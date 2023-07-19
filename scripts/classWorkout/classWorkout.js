@@ -13,7 +13,7 @@ class Workout {
     
       (this._clicksCount = 0),
       (this._wolfCount = 0),
-      this.AAAwolfFunc =  'return this._wolfCount += a'
+      this.AAAwolfFunc =  'return this._wolfCount += this.distance'
       
   }
   
