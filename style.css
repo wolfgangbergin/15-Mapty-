@@ -49,11 +49,65 @@ a:visited {
   flex-direction: column;
 }
 
-.logo {
-  height: 5.2rem;
-  align-self: center;
-  margin-bottom: 4rem;
+.logoDiv {
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  margin-bottom: 2rem;
+
 }
+
+
+.logo {
+   display: flex;
+   flex-grow: .4;
+  height: 5.2rem;
+  align-self: left;
+  margin-bottom: 4rem;
+  
+ 
+}
+
+.reset__button{
+  display: flex;
+  flex-grow: 0;
+  height: 2.5rem;
+
+  align-self: left;
+  margin: 1rem;
+  
+  border-radius: 3px;
+}
+
+.recenter__button{
+  display: flex;
+  flex-grow: 0;
+  height: 2.5rem;
+
+  align-self: left;
+  margin: 1rem;
+  
+  border-radius: 3px;
+}
+
+ .reset {
+  display: flex;
+
+  flex-shrink: 0;
+  height: 5.2rem;
+  align-self: left;
+  margin-bottom: 4rem;
+  
+ }
+
+ .space{
+  display: flex;
+  flex-grow: .4;
+  height: 5.2rem;
+  align-self: right;
+  margin-bottom: 4rem;
+  
+ }
 
 .workouts {
   list-style: none;

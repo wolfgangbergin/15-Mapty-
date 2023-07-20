@@ -25,7 +25,7 @@ delete__div.classList.add('delete__div');
 
 let Delete = document.createElement('button');
 
-Delete.classList.add('btn', 'btn--small', 'btn--delete');
+ Delete.classList.add('btn', 'btn--small', 'btn--delete');
 Delete.dataset.id = ele.id;
 Delete.textContent = 'Delete';
     let li = document.createElement('li');

@@ -3,7 +3,7 @@ Object.defineProperty(Object.prototype, 'addClicksCount', {
   value: function(){
 this._clicksCount += 1;
   },
-  writable: 0,
+  writable: 1,
   configurable: 0,
   enumerable: 0,
 });

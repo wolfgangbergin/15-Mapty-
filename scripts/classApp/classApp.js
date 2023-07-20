@@ -9,7 +9,7 @@ import { moveMap } from './moveMap.js';
 import { getLocalStorage } from './getLocalStorage.js';
 import {test7} from '../test/test7.js';
 import  reset  from './reset.js';
-
+import recenter from './recenter.js';
 class App {
   layerGroup;
   _map;

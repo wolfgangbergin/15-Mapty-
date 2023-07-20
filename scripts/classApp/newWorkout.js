@@ -51,7 +51,7 @@ const newWorkout = function (e) {
       ? new Running(tempObj)
       : new Cycling(tempObj);
 
-  l(this.workouts)
+
   let temp = this.workouts;
   temp.push(kim);
   this.workouts = temp;

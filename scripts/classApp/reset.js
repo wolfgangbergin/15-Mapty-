@@ -4,12 +4,14 @@
 
 
 
+let reset = document.querySelector('.reset__button');
 
 
 
 
-logo.addEventListener('click', () => {
+reset.addEventListener('click', () => {
     localStorage.removeItem('workouts');
+  
     location.reload();
 })
 
