@@ -276,9 +276,9 @@ a:visited {
 }
 
 .delete__div{
-  grid-column: span 1;
+  grid-column: span 3;
   display: flex;
-  justify-content: center;
+  justify-content: right;
  
 
  
