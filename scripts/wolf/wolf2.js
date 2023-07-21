@@ -32,7 +32,7 @@ Object.defineProperty(Window.prototype, 'e', {
 
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
+let recenter = document.querySelector('.recenter__button');
 const logo = document.querySelector('.logo');
 const form = document.querySelector('.form');
 const containerWorkouts = document.querySelector('.workouts');

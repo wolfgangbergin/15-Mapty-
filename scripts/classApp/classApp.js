@@ -9,7 +9,7 @@ import { moveMap } from './moveMap.js';
 import { getLocalStorage } from './getLocalStorage.js';
 import {test7} from '../test/test7.js';
 import  reset  from './reset.js';
-import recenter from './recenter.js';
+import recenterFunc from './recenter.js';
 class App {
   layerGroup;
   _map;
@@ -25,7 +25,10 @@ class App {
 
     this.layerGroup = L.layerGroup().addTo(this._map);
     this._getLocalStorage();
+    recenter.addEventListener('click', this._recenterFunc)
   }
+  
+  _recenterFunc = recenterFunc.bind(this);
 
   _deleteWorkout = deleteWorkout.bind(this);
 
